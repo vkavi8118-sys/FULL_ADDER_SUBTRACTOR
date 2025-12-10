@@ -1,5 +1,5 @@
 # FULL_ADDER_SUBTRACTOR
-DATE:20.11.2025
+DATE:10.12.2025
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
@@ -38,8 +38,7 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
-
-<img width="364" height="288" alt="image" src="https://github.com/user-attachments/assets/779175a2-3f60-4112-9dc8-17f3ab3e96bd" />
+<img width="1280" height="965" alt="image" src="https://github.com/user-attachments/assets/00dce7d9-03f6-414e-85f7-9e03317f7e85" />
 
 **Procedure**
 
@@ -55,27 +54,21 @@ Borrow out = A'Bin + A'B + BBin
 
 **Program:**
 
-module ex3 (a,b,c,x,y,z,sum,dif,car,bor);
-
-input a,b,c,x,y,z;
-
-output sum,dif,car,bor;
-
-assign sum = a^b^c;
-
-assign car = a&b | a&c | b&c;
-
-assign dif = x^y^z;
-
-assign bor = ~x&z | ~x&y | y&z;
-
+module DE4(A, B, C, S1, C1, D1, B1);
+input A, B, C;       
+output S1, C1, D1, B1;
+assign S1 = A ^ B ^ C;                
+assign C1 = A & B | A & C | B & C;    
+assign D1 = A ^ B ^ C;                
+assign B1 = (~A & (B | C)) | (B & C); 
 endmodule
 
+
 **RTL Schematic**
-<img width="1920" height="1080" alt="Screenshot (75)" src="https://github.com/user-attachments/assets/6cee69f4-66fa-4afd-89eb-c0c1ee35909c" />
+<img width="1920" height="1080" alt="Screenshot (100)" src="https://github.com/user-attachments/assets/b7a5bd3d-6ea9-4a52-8afd-301c21f009b6" />
 
 **Output Timing Waveform**
-<img width="1920" height="1080" alt="Screenshot (78)" src="https://github.com/user-attachments/assets/5ba18607-930c-487c-a60a-3888979b3bbc" />
+<img width="1920" height="1080" alt="Screenshot (101)" src="https://github.com/user-attachments/assets/b3a67779-db5f-4c36-b3e9-f802f50c20ad" />
 
 **Result:**
 
