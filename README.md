@@ -62,7 +62,7 @@ assign C1 = A & B | A & C | B & C;
 assign D1 = A ^ B ^ C;                
 assign B1 = (~A & (B | C)) | (B & C); 
 endmodule
-
+REGISTER NUMBER:25017974 NAME:Kavinaya V
 
 **RTL Schematic**
 <img width="1920" height="1080" alt="Screenshot (100)" src="https://github.com/user-attachments/assets/b7a5bd3d-6ea9-4a52-8afd-301c21f009b6" />
